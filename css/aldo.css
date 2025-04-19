@@ -132,21 +132,19 @@ body {
             margin-bottom: 20px;
         }
         nav ul {
-            flex-direction: column;
-            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
         }
-
         nav li {
-            margin-bottom: 5px;
-            margin-right: 0;
+            display: inline-block;
+            margin: 5px;
         }
-
         column.middle {
             flex: 1 1 100%;
             max-width: 100%;
-        }   
-    
-            
+        }       
         iframe {
             width: 100%;
             height: auto;
