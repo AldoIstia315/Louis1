@@ -19,6 +19,7 @@ body {
             padding: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav li {
@@ -76,7 +77,9 @@ body {
        .content-wrapper {
         display: flex;
         padding: 20px;
+        gap: 20px;
         flex-direction: row;
+        flex-wrap: wrap;
        }
 
        .main-content {
@@ -87,29 +90,25 @@ body {
        .row {
         display: flex;
         justify-content: center;
-        gap: 50px; /* jarak antar kolom */
+        gap: 50px; 
         margin-top: 30px;
         text-align: center;
        }
        
        .column {
-        float: left;
-        padding-right: 10px;
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
        }
 
        .column.middle {
-        width: 30%;
+        flex: 1 1 30%;
+        max-width: 30%;
        }
 
-       .row::after {
-        content: "";
-        display: table;
-        clear: both;
-       }
+
         
-       
-    
-
        footer {
         background-color: #b10fa6;
         padding: 10px; 
@@ -133,14 +132,24 @@ body {
             margin-bottom: 20px;
         }
         nav ul {
-            text-align: left;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
         }
-
+        
         nav li {
-            display: block;
-            margin-bottom: 5px;
+            display: inline-block;
+            margin: 5px;
         }
+        
 
+        column.middle {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }   
+    
+            
         iframe {
             width: 100%;
             height: auto;
